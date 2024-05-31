@@ -1,13 +1,16 @@
 import { Router } from "express";
+import { PatientController } from "../src/controllers/PatientController";
 
-// const controller;
-// const responseHandler;
-const userRouter = Router();
+// Init router
+const patientRouter = Router();
 
-// User routes
-userRouter.post("/");
-userRouter.get("/");
-userRouter.patch("/:id");
-userRouter.delete("/:id");
+// Init controller
+const controller = PatientController;
 
-export default userRouter;
+// Patient routes
+patientRouter.post("/", controller.create);
+patientRouter.get("/", controller.list);
+patientRouter.patch("/:id", controller.update);
+patientRouter.delete("/:id", controller.delete);
+
+export default patientRouter;
