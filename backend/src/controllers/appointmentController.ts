@@ -1,24 +1,28 @@
 import { Request, Response } from "express";
 
-export const PatientController = {
+export const AppointmentController = {
   list: async (req: Request, res: Response) => {
     res.status(200).json({
-      message: "List of patients",
+      status: "OK",
+      msg: "List all appointments",
     });
   },
   create: async (req: Request, res: Response) => {
     res.status(201).json({
-      message: "Create a patient",
+      status: "OK",
+      msg: "Create a new appointment",
     });
   },
   update: async (req: Request, res: Response) => {
     res.status(200).json({
-      message: "Update a patient",
+      status: "OK",
+      msg: "Update an appointment",
     });
   },
   delete: async (req: Request, res: Response) => {
     res.status(200).json({
-      message: "Delete a patient",
+      status: "OK",
+      msg: "Delete an appointment",
     });
   },
 };
